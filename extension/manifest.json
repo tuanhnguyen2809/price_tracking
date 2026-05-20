@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Internal AI Sales Copilot",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Internal copilot overlay for Pancake chat operations.",
   "permissions": ["storage", "activeTab", "scripting"],
   "host_permissions": [

@@ -1,13 +1,23 @@
 # price_tracking - Internal AI Sales Copilot Bootstrap
 
-This repository now contains a bootstrap implementation plan and skeleton for an internal Chrome extension copilot that runs alongside Pancake.
+Demo internal Chrome extension copilot for Pancake chat operations.
+
+## What's included
+- Floating in-page copilot panel on Pancake pages.
+- Demo internal login button (session token in extension storage).
+- Suggestion flow via backend (`/v1/copilot/suggest`) with local fallback for demo.
+- One-click actions:
+  - Import suggested text into chat input.
+  - Import and send immediately.
+- Enter-first workflow is preserved (manual Enter remains primary behavior).
 
 ## Structure
-- `docs/implementation-plan.md`: Product, security, architecture, rollout and acceptance criteria.
-- `extension/manifest.json`: MV3 extension manifest.
-- `extension/src/background.js`: Background service worker with suggest API proxy call.
-- `extension/src/content.js`: DOM extraction and one-click input insertion helpers.
+- `docs/implementation-plan.md`: architecture + security + rollout.
+- `extension/manifest.json`: MV3 config.
+- `extension/src/background.js`: login/session + suggest orchestration.
+- `extension/src/content.js`: UI overlay, context collection, insert/send actions.
 
-## Notes
-- For production security, OpenAI credentials must remain server-side only.
-- Access control should be handled by backend with manager approval and RBAC.
+## Security notes
+- Production setup must keep model/API keys in backend secret manager only.
+- Employee and manager controls should be enforced by backend RBAC and policy signatures.
+- This repo contains a demo fallback to keep showing UX without backend connectivity.

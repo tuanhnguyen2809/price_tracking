@@ -124,3 +124,9 @@ Response:
 - One-click insert works in Pancake input.
 - Enter key send still works as default behavior.
 
+
+## 8. Demo Delivered
+- In-page overlay panel on Pancake page with login + suggest actions.
+- Suggestion cards include `Import vào ô chat` and `Import + gửi` buttons.
+- Default workflow still prioritizes staff pressing Enter manually after import.
+- Backend unavailable fallback still returns 3 reply variants for live demo continuity.
