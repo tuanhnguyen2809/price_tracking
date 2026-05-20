@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Internal AI Sales Copilot",
+  "version": "0.1.0",
+  "description": "Internal copilot overlay for Pancake chat operations.",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": [
+    "https://*.pancake.vn/*",
+    "https://copilot-internal.yourcompany.local/*"
+  ],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.pancake.vn/*"],
+      "js": ["src/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "AI Sales Copilot"
+  }
+}
